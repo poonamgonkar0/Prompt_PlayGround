@@ -44,3 +44,8 @@ def custum_prompt (role,task,constraint,length,output,input_message):
     full_text = "\n".join([message.content for message in formatted_prompt])
     
     return full_text
+
+def raw_generator (prompt):
+    raw=model.invoke(prompt)
+    return raw.content
+
